@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 49%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+
+    padding: 20px;
+
+    background-color: var(--color-background);
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+li::before {
+    content: "\2022";
+    color: var(--color-bullets);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+a,
+a:active {
+	text-decoration: none;
+}
