@@ -27,6 +27,13 @@
     justify-content: space-around;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
 @mixin generate-margins-paddings-options($n, $step: 1, $stepIni: 1) {
 
     @for $i from $stepIni through $n {
