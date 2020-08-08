@@ -1,0 +1,67 @@
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.u-center-text { text-align: center; }
+
+.u-margin-bottom-small { margin-bottom: 1.5rem; }
+.u-margin-bottom-medium { margin-bottom: 4rem; }
+.u-margin-bottom-big { margin-bottom: 8rem; }
+
+.u-margin-top-big { margin-top: 8rem; }
+.u-margin-top-huge { margin-top: 10rem; }
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin generate-margins-paddings-options($n, $step: 1, $stepIni: 1) {
+
+    @for $i from $stepIni through $n {
+        //Padding
+        .p-t-#{$i * $step} {
+            padding-top: ($i * $step * 1px);
+        }
+        .p-t-#{$i * $step} {
+            padding-top: ($i * $step * 1px);
+        }
+        .p-r-#{$i * $step} {
+            padding-right: ($i * $step * 1px);
+        }
+        .p-l-#{$i * $step} {
+            padding-left: ($i * $step * 1px);
+        }
+        .p-b-#{$i * $step} {
+            padding-bottom: ($i * $step * 1px);
+        }
+
+        //Margins
+        .m-t-#{$i * $step} {
+            margin-top: ($i * $step * 1px);
+        }
+        .m-r-#{$i * $step} {
+            margin-right: ($i * $step * 1px);
+        }
+        .m-l-#{$i * $step} {
+            margin-left: ($i * $step * 1px);
+        }
+        .m-b-#{$i * $step} {
+            margin-bottom: ($i * $step * 1px);
+        }
+    }   
+}
+
+@include generate-margins-paddings-options(9); //1, 2, 3, 4, 5...
+@include generate-margins-paddings-options(10, 5); //5, 10, 15, 20...
