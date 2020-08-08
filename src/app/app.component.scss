@@ -1,0 +1,9 @@
+.body {
+    height: 100vh;
+
+    &__content {
+        height: 75%;
+        font-size: 3rem;
+        color: var(--color-grey-dark-1);
+    }
+}
