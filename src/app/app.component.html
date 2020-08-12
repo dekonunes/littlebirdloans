@@ -1,3 +1,13 @@
 <body class="body">
-    <app-card></app-card>
+    <app-card (index)="updateContent($event)"></app-card>
+    
+    <div class="body__content flex-center">
+        <app-home *ngIf="index === -1"></app-home>
+        <app-personal *ngIf="index === 0"></app-personal>
+        <app-business *ngIf="index === 1"></app-business>
+        <app-consolidation *ngIf="index === 2"></app-consolidation>
+        <app-personal *ngIf="index === 3"></app-personal>
+        <app-personal *ngIf="index === 4"></app-personal>
+        <app-personal *ngIf="index === 5"></app-personal>
+    </div>
 </body>

@@ -132,6 +132,10 @@
               "protractorConfig": "e2e/protractor-ci.conf.js"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
 @Component({
@@ -20,5 +20,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
   ]
 })
 export class CardComponent {
+  @Output() index = new EventEmitter<number>();
+
   cards = ['Personal Loan', 'Business Loan', 'Debt Consolidation', 'Home Loan', 'Car Loan', 'Student Loan', 'Wedding Loan', 'Moving Home'];
 }
